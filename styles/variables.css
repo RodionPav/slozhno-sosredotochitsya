@@ -6,5 +6,9 @@
   --desktop-padding: 0 20px;
   --title-color: #db00ff;
   --hover-border: #ff007066;
-  --section-title: #000028;
+  --additional-color: #000028;
+  --main-gap: 20px;
+  --additional-gap: 10px;
+  --main-font-size: 18px;
+  --main-font-weight: 700;
 }

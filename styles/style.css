@@ -1,22 +1,8 @@
 .page {
-
   font-family: "IBM Plex mono", Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--bg-color);
-  background-repeat: no-repeat;
-
+  font-size: var(--main-font-size);
   background-position: top center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.theme-dark .page {
-  background-image: url(../images/cover-image-dark.png);
-}
-
-.theme-light .page {
-  background-image: url(../images/cover-image-light.png);
+  background: top center var(--bg-color) no-repeat cover fixed;
 }
 
 .header {
@@ -25,23 +11,21 @@
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  height: 668px;
+  min-height: 668px;
   padding: var(--mobail-padding);
 }
 
 .header__inscription {
   position: absolute;
-  top: 0;
-  right: 0;
-  padding-top: 12px;
-  padding-right: 15px;
+  top: 12px;
+  right: 15px;
   color: var(--accent-color);
 }
 
 .header__inscription::after {
   content: "";
   padding-right: 23px;
-  background-image: url("../images/Ellipse.png");
+  background-image: url("../images/Ellipse.svg");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 18px;
@@ -50,8 +34,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 10px;
+  right: 10px;
   align-self: flex-start;
   width: 25px;
   height: 25px;
@@ -94,6 +78,7 @@
   background-color: transparent;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: border 0.6s linear;
 }
 
 .header__theme-menu-button:hover {
@@ -115,7 +100,7 @@
   align-self: flex-start;
   padding-top: 16px;
   color: var(--title-color);
-  font-weight: 700;
+  font-weight: var(--main-font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -129,15 +114,15 @@
   align-self: flex-start;
   margin-top: 41px;
   overflow-wrap: break-word;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
   max-width: 355px;
 }
 
 .section {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 20px;
+  gap: var(--main-gap);
   margin-bottom: 50px;
   padding: var(--mobail-padding);
 }
@@ -147,24 +132,33 @@
 }
 
 .section_title {
-  font-weight: 700;
-  font-size: 18px;
+  color: var(--accent-color);
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
   line-height: 23.4px;
 }
 
 .section_list {
   display: grid;
-  gap: 20px;
+  gap: var(--main-gap);
 }
 
 .section_list-item {
   display: grid;
-  gap: 10px;
+  gap: var(--additional-gap);
 }
 
 .section_list-title {
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
+  line-height: 23.4px;
+  text-align: left;
+}
+
+.section_how-title {
+  margin-bottom: 20px;
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
   line-height: 23.4px;
   text-align: left;
 }
@@ -172,12 +166,14 @@
 .section_list-text {
   color: var(--main-text-color);
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--main-font-size);
   line-height: 23.4px;
 }
 
 .section_list-text-link {
+  border-bottom: 1px solid transparent;
   text-shadow: 2px 2px 0 var(--accent-color);
+  transition: border 0.6s linear;
 }
 
 .section_list-text-link:hover {
@@ -191,46 +187,44 @@
 
 .section_gallery {
   display: grid;
-  gap: 10px;
+  gap: var(--additional-gap);
   padding: var(--mobail-padding);
 }
 
 .section_gallery_title {
-  color: var(--section-title);
+  color: var(--additional-color);
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
+  line-height: 23.4px;
 }
 
 .section_gallery_images {
   display: grid;
-  gap: 10px;
+  gap: var(--additional-gap);
 }
 
 .sunset-img {
   width: 100%;
-  max-width: 720px;
   height: auto;
 }
 
 .ice-cream-img {
   width: 100%;
-  max-width: 720px;
   height: auto;
 }
 
 .tape-img {
   width: 100%;
-  max-width: 720px;
   height: auto;
 }
 
 .books-img {
   width: 100%;
-  max-width: 720px;
   height: auto;
 }
 
 .street-img {
   width: 100%;
-  max-width: 720px;
   height: auto;
 }
 
@@ -239,14 +233,14 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 668px;
+  min-height: 668px;
   margin-top: 40px;
   padding: var(--mobail-padding);
 }
 
 .footer_title {
   color: var(--title-color);
-  font-weight: 700;
+  font-weight: var(--main-font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
   text-align: left;
@@ -256,7 +250,7 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
     justify-content: normal;
-    height: 1024px;
+    min-height: 1024px;
     padding: var(--desktop-padding);
   }
 
@@ -271,8 +265,8 @@
   }
 
   .header__inscription {
-    padding-top: 20px;
-    padding-right: 25px;
+    top: 21px;
+    right: 26px;
   }
 
   .header__theme-menu {
@@ -296,7 +290,7 @@
   }
 
   .section {
-    gap: 20px;
+    gap: var(--main-gap);
     margin-bottom: 60px;
     padding: var(--desktop-padding);
   }
@@ -321,7 +315,7 @@
 
   .section_gallery {
     display: grid;
-    gap: 20px;
+    gap: var(--main-gap);
     padding: var(--desktop-padding);
   }
 
@@ -335,13 +329,12 @@
       "A A B"
       "C D B"
       "C E E";
-    gap: 20px;
+    gap: var(--main-gap);
   }
 
   .sunset-img {
     grid-area: A;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -349,7 +342,6 @@
   .ice-cream-img {
     grid-area: B;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -357,7 +349,6 @@
   .tape-img {
     grid-area: C;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -365,7 +356,6 @@
   .books-img {
     grid-area: D;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -373,7 +363,6 @@
   .street-img {
     grid-area: E;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -391,13 +380,13 @@
 @media (min-width: 1024px) {
   .header {
     justify-content: normal;
-    height: 768px;
+    min-height: 768px;
     padding: var(--desktop-padding);
   }
 
   .header__inscription {
-    padding-top: 21px;
-    padding-right: 25px;
+    top: 21px;
+    right: 26px;
   }
 
   .decorated-zone::before {
@@ -418,7 +407,7 @@
 
   .header__theme-menu-list {
     flex-direction: row;
-    gap: 10px;
+    gap: var(--additional-gap);
   }
 
   .header__text {
@@ -437,7 +426,7 @@
   }
 
   .section {
-    gap: 20px;
+    gap: var(--main-gap);
     margin-bottom: 60px;
     padding: var(--desktop-padding);
   }
@@ -474,7 +463,7 @@
 
   .section_gallery {
     display: grid;
-    gap: 20px;
+    gap: var(--main-gap);
     padding: var(--desktop-padding);
   }
 
@@ -488,13 +477,12 @@
       "A A B"
       "C D B"
       "C E E";
-    gap: 20px;
+    gap: var(--main-gap);
   }
 
   .sunset-img {
     grid-area: A;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -502,7 +490,6 @@
   .ice-cream-img {
     grid-area: B;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -510,7 +497,6 @@
   .tape-img {
     grid-area: C;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -518,7 +504,6 @@
   .books-img {
     grid-area: D;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
@@ -526,13 +511,12 @@
   .street-img {
     grid-area: E;
     width: 100%;
-    max-width: 720px;
     height: 100%;
     object-fit: cover;
   }
 
   .footer {
-    height: 768px;
+    min-height: 768px;
     margin-top: 60px;
   }
 
