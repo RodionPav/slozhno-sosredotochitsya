@@ -131,6 +131,7 @@
   overflow-wrap: break-word;
   font-weight: 700;
   font-size: 18px;
+  max-width: 355px;
 }
 
 .section {
@@ -426,7 +427,6 @@
 
   .header__text {
     justify-self: end;
-    width: 100%;
     width: 100%;
     max-width: 491px;
     margin-top: 51px;
