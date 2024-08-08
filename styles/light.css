@@ -1,15 +1,5 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  .header__inscription {
+  header__inscription {
     visibility: hidden;
   }
 }
@@ -22,10 +12,6 @@
   --hover-border: #32312d66;
   --section-title: #353430;
 }
-
-
-
-/* Остальные стили */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -41,9 +27,7 @@
     visibility: hidden;
   }
 
-  .section_title{
+  .section_title {
     color: var(--section-title);
   }
 }
-
-/* Остальные стили */

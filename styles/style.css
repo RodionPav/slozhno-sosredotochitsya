@@ -1,14 +1,14 @@
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--bg-color);
 
   font-family: "IBM Plex mono", Arial, Helvetica, sans-serif;
   font-size: 18px;
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
 
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 .theme-dark .page {
@@ -20,57 +20,57 @@
 }
 
 .header {
-  padding: var(--mobail-padding);
-  height: 668px;
-  display: grid;
   position: relative;
+  display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 668px;
+  padding: var(--mobail-padding);
 }
 
 .header__inscription {
-  padding-right: 15px;
-  padding-top: 12px;
   position: absolute;
-  color: var(--accent-color);
   top: 0;
   right: 0;
+  padding-top: 12px;
+  padding-right: 15px;
+  color: var(--accent-color);
 }
 
 .header__inscription::after {
   content: "";
-  background-image: url("../images/Ellipse.png");
   padding-right: 23px;
-  background-size: 18px;
-  background-position: center right;
+  background-image: url("../images/Ellipse.png");
   background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 18px;
 }
 
 .decorated-zone::before {
   content: "";
-  width: 25px;
-  height: 25px;
   position: absolute;
-  align-self: flex-start;
-  color: var(--accent-color);
-  border-right: 1px solid;
-  border-top: 1px solid;
   top: 0px;
   right: 0px;
+  align-self: flex-start;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  color: var(--accent-color);
 }
 
 .decorated-zone::after {
   content: "";
-  width: 25px;
-  height: 25px;
   position: absolute;
-  align-self: flex-end;
-  color: var(--accent-color);
-  border-left: 1px solid;
-  border-bottom: 1px solid;
   bottom: 10px;
   left: 10px;
+  align-self: flex-end;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  color: var(--accent-color);
 }
 
 .header__theme-menu {
@@ -86,15 +86,14 @@
 
 .header__theme-menu-button {
   border: 1px solid transparent;
+  padding: 0 13px;
+  outline: none;
+  overflow: hidden;
   color: var(--accent-color);
-  color: var(--accent-color);
+  text-transform: lowercase;
   background-color: transparent;
   background-repeat: no-repeat;
-  text-transform: lowercase;
   cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  padding: 0 13px;
 }
 
 .header__theme-menu-button:hover {
@@ -107,17 +106,17 @@
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none;
   border: 1px solid var(--accent-color);
   padding: 0px 13px;
+  pointer-events: none;
 }
 
 .header__title {
   align-self: flex-start;
   padding-top: 16px;
   color: var(--title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
@@ -129,17 +128,17 @@
 .header__text {
   align-self: flex-start;
   margin-top: 41px;
-  font-size: 18px;
-  font-weight: 700;
   overflow-wrap: break-word;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .section {
-  padding: var(--mobail-padding);
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 20px;
   margin-bottom: 50px;
+  padding: var(--mobail-padding);
 }
 
 .section_why {
@@ -147,8 +146,8 @@
 }
 
 .section_title {
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 23.4px;
 }
 
@@ -163,16 +162,16 @@
 }
 
 .section_list-title {
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 23.4px;
   text-align: left;
 }
 
 .section_list-text {
   color: var(--main-text-color);
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 23.4px;
 }
 
@@ -190,9 +189,9 @@
 }
 
 .section_gallery {
-  padding: var(--mobail-padding);
   display: grid;
   gap: 10px;
+  padding: var(--mobail-padding);
 }
 
 .section_gallery_title {
@@ -205,49 +204,49 @@
 }
 
 .sunset-img {
-  height: auto;
   width: 100%;
   max-width: 720px;
+  height: auto;
 }
 
 .ice-cream-img {
-  height: auto;
   width: 100%;
   max-width: 720px;
+  height: auto;
 }
 
 .tape-img {
-  height: auto;
   width: 100%;
   max-width: 720px;
+  height: auto;
 }
 
 .books-img {
-  height: auto;
   width: 100%;
   max-width: 720px;
+  height: auto;
 }
 
 .street-img {
-  height: auto;
   width: 100%;
   max-width: 720px;
+  height: auto;
 }
 
 .footer {
-  padding: var(--mobail-padding);
   position: relative;
-  margin-top: 40px;
-  height: 668px;
   display: grid;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 668px;
+  margin-top: 40px;
+  padding: var(--mobail-padding);
 }
 
 .footer_title {
   color: var(--title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
   text-align: left;
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -255,9 +254,9 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
-    padding: var(--desktop-padding);
-    height: 1024px;
     justify-content: normal;
+    height: 1024px;
+    padding: var(--desktop-padding);
   }
 
   .decorated-zone::before {
@@ -271,8 +270,8 @@
   }
 
   .header__inscription {
-    padding-right: 25px;
     padding-top: 20px;
+    padding-right: 25px;
   }
 
   .header__theme-menu {
@@ -281,11 +280,11 @@
   }
 
   .header__title {
-    align-self: center;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-bottom: 15px;
     position: relative;
     right: 20px;
+    align-self: center;
+    padding-bottom: 15px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__text {
@@ -321,8 +320,8 @@
 
   .section_gallery {
     display: grid;
-    padding: var(--desktop-padding);
     gap: 20px;
+    padding: var(--desktop-padding);
   }
 
   .section_gallery_title {
@@ -341,40 +340,40 @@
   .sunset-img {
     grid-area: A;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .ice-cream-img {
     grid-area: B;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .tape-img {
     grid-area: C;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .books-img {
     grid-area: D;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .street-img {
     grid-area: E;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -390,14 +389,14 @@
 
 @media (min-width: 1024px) {
   .header {
-    height: 768px;
     justify-content: normal;
+    height: 768px;
     padding: var(--desktop-padding);
   }
 
   .header__inscription {
-    padding-right: 25px;
     padding-top: 21px;
+    padding-right: 25px;
   }
 
   .decorated-zone::before {
@@ -426,19 +425,19 @@
   }
 
   .header__text {
-    width: 100%;
-    max-width: 491px;
     justify-self: end;
     width: 100%;
+    width: 100%;
+    max-width: 491px;
     margin-top: 51px;
   }
 
   .header__title {
-    align-self: center;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-bottom: 15px;
     position: relative;
     right: 20px;
+    align-self: center;
+    padding-bottom: 15px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .section {
@@ -479,8 +478,8 @@
 
   .section_gallery {
     display: grid;
-    padding: var(--desktop-padding);
     gap: 20px;
+    padding: var(--desktop-padding);
   }
 
   .section_gallery_title {
@@ -499,40 +498,40 @@
   .sunset-img {
     grid-area: A;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .ice-cream-img {
     grid-area: B;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .tape-img {
     grid-area: C;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .books-img {
     grid-area: D;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
   .street-img {
     grid-area: E;
     width: 100%;
-    height: 100%;
     max-width: 720px;
+    height: 100%;
     object-fit: cover;
   }
 
