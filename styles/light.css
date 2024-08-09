@@ -5,10 +5,10 @@
   --title-color: #ffc2e6;
   --hover-border: #32312d66;
   --additional-color: #353430;
-  background-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light {
+  background-image: url(../images/cover-image-light.png);
   .header__inscription {
     visibility: hidden;
   }
@@ -42,10 +42,10 @@
     --title-color: #ffc2e6;
     --hover-border: #32312d66;
     --additional-color: #353430;
-    background-image: url(../images/cover-image-light.png);
   }
 
   .page.theme_auto {
+    background-image: url(../images/cover-image-light.png);
     .header__inscription {
       visibility: hidden;
     }
@@ -65,7 +65,7 @@
     .decorated-zone::after {
       color: var(--additional-color);
     }
-    
+
     .section_title {
       color: var(--additional-color);
     }

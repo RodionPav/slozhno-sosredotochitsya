@@ -2,7 +2,9 @@
   font-family: "IBM Plex mono", Arial, Helvetica, sans-serif;
   font-size: var(--main-font-size);
   background-position: top center;
-  background: top center var(--bg-color) no-repeat cover fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .header {
@@ -171,7 +173,7 @@
 }
 
 .section_list-text-link {
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
   transition: border 0.6s linear;
 }
@@ -368,7 +370,7 @@
   }
 
   .footer {
-    height: 1024px;
+    min-height: 1024px;
     margin-top: 60px;
   }
 
